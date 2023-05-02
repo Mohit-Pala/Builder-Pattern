@@ -1,6 +1,11 @@
 package laptop;
 
 public class LaptopDirector {
+    /**
+     * @param lb
+     * @param id
+     * build dell ryzen laptop
+     */
     public void buildDellRyzenLaptop(LaptopBuilder lb, int id){
         lb.manufacturer("Dell");
         lb.CPU("Ryzen 7");
@@ -9,6 +14,11 @@ public class LaptopDirector {
         lb.laptopID(id);
     }
 
+    /**
+     * @param lb
+     * @param id
+     * build dell intel laptop
+     */
     public void buildDellIntelLaptop(LaptopBuilder lb, int id){
         lb.manufacturer("Dell");
         lb.CPU("Core i7");
@@ -17,6 +27,11 @@ public class LaptopDirector {
         lb.laptopID(id);
     }
 
+    /**
+     * @param lb
+     * @param id
+     * build hp ryzen laptop
+     */
     public void buildHPRyzenLaptop(LaptopBuilder lb, int id){
         lb.manufacturer("HP");
         lb.CPU("Ryzen 5");
@@ -25,6 +40,11 @@ public class LaptopDirector {
         lb.laptopID(id);
     }
 
+    /**
+     * @param lb
+     * @param id
+     * build hp intel laptop
+     */
     public void buildHPIntelLaptop(LaptopBuilder lb, int id){
         lb.manufacturer("HP");
         lb.CPU("Core i5");
@@ -33,6 +53,11 @@ public class LaptopDirector {
         lb.laptopID(id);
     }
 
+    /**
+     * @param lb
+     * @param id
+     * build a asus gaming laptop
+     */
     public void buildAsusGamingLaptop(LaptopBuilder lb, int id){
         lb.manufacturer("Asus");
         lb.CPU("Ryzen 9");
