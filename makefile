@@ -1,3 +1,5 @@
+# makefile modified from softgel pills assignment makefile
+
 JFLAGS = -d bin -sourcepath src
 
 default: 
