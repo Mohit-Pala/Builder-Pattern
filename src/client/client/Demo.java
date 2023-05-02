@@ -16,32 +16,11 @@ public class Demo {
     private static Random random = new Random();
 
     public static void main(String[] args) {
-/*         LaptopBuilder lb = new LaptopBuilder();
-        lb.manufacturer("Dell");
-        lb.CPU("Ryzen 7");
-        lb.ramGB(16);
-        lb.diskGB(1024);
-        lb.laptopID(512990);
-
-        Laptop dellLaptop = lb.build();
-        System.out.println(dellLaptop);
-
-        Random random = new Random();
-
-        LaptopDirector ld = new LaptopDirector();
-        LaptopBuilder build = new LaptopBuilder();
-        ld.buildAsusGamingLaptop(build, random.nextInt(100000, 999999));
-        Laptop asusGaming = build.build();
-        System.out.println(asusGaming); */
-
 
         Scanner scan = new Scanner(System.in);
-       
 
-       boolean exit = false;
-
+        boolean exit = false;
        
-        
         while (!exit){
             System.out.println("0: About");
             System.out.println("1: BuildLaptop");
@@ -64,8 +43,12 @@ public class Demo {
                 System.out.println("Try Again");
             }
         }
+        scan.close();
     }
 
+    /**
+     * prints out the builds stored in the array, max size 100 builds
+     */
     private static void viewBuilds() {
         if(builds[0] == null){
             System.out.println("You have no builds");
@@ -79,6 +62,9 @@ public class Demo {
         }
     }
 
+    /**
+     * Method to build a laptop using premade configs or use a custom comfig
+     */
     private static void buildLaptop() {
         Scanner scan = new Scanner(System.in);
         System.out.println("1: Dell AMD Laptop");
@@ -89,7 +75,7 @@ public class Demo {
         System.out.println("6: Custom build");
 
         int x = scan.nextInt();
-
+        scan.close();
         if(x == 1){
             director.buildDellRyzenLaptop(builder, random.nextInt(100000, 999999));
             Laptop lap = builder.build();
@@ -141,6 +127,7 @@ public class Demo {
             System.out.println("Enter disk amount in integers");
             lb.diskGB(tmp.nextInt());
             lb.laptopID(random.nextInt(100000, 999999));
+            tmp.close();
             Laptop customLaptop = lb.build();
             builds[buildIndex] = customLaptop;
             buildIndex++;
@@ -148,10 +135,36 @@ public class Demo {
         }
     }
 
+    /**
+     * Prints information about the porject
+     */
     private static void printAbout() {
         System.out.println("Simple program to demonstrate the use of BUILDER PATTERN");
         System.out.println("Builder makes different types of objects using a similar consturction process");
         System.out.println("The Director class makes premade comfigurations for builder");
         System.out.println("laptop builder class allows the program to build complex laptop classes with a simple constructor");
     }
+
+    /* 
+    public static void main(String[] args) {
+                 LaptopBuilder lb = new LaptopBuilder();
+        lb.manufacturer("Dell");
+        lb.CPU("Ryzen 7");
+        lb.ramGB(16);
+        lb.diskGB(1024);
+        lb.laptopID(512990);
+
+        Laptop dellLaptop = lb.build();
+        System.out.println(dellLaptop);
+
+        Random random = new Random();
+
+        LaptopDirector ld = new LaptopDirector();
+        LaptopBuilder build = new LaptopBuilder();
+        ld.buildAsusGamingLaptop(build, random.nextInt(100000, 999999));
+        Laptop asusGaming = build.build();
+        System.out.println(asusGaming); 
+
+    }
+    */
 }

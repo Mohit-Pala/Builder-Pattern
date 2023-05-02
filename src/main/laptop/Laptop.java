@@ -23,22 +23,37 @@ public class Laptop {
     }
 
 
+    /**
+     * @return manufacturer
+     */
     public String getManufacturer() {
         return this.manufacturer;
     }
 
+    /**
+     * @return cpu model
+     */
     public String getCPU() {
         return this.CPU;
     }
 
+    /**
+     * @return ram in GB
+     */
     public int getRamGB() {
         return this.ramGB;
     }
 
+    /**
+     * @return storage in GB
+     */
     public int getDiskGB() {
         return this.diskGB;
     }
 
+    /**
+     * @return laptops id
+     */
     public int getLaptopID() {
         return this.laptopID;
     }
