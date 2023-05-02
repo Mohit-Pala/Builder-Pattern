@@ -1,5 +1,19 @@
+Builder pattern demo: 
 Laptop Builder
+
 By:Mohit Pala
+
+Usage: 
+
+       git clone https://github.com/Pala-Venkata-Mohit/Builder-Pattern.git
+
+       cd Builder-Pattern
+
+       make compile
+
+       make demo
+       
+About:
 
 Simple program to demonstrate the use of BUILDER PATTERN
 Builder makes different types of objects using a similar consturction process
